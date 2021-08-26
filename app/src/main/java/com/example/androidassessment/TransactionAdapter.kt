@@ -14,10 +14,10 @@ class TransactionAdapter(var transactionList: List<TransactionDetails>):Recycler
 
     override fun onBindViewHolder(holder: TransactionViewHolder, position: Int) {
         var transactions = transactionList.get(position)
-        holder.tvdescription = transactions.description
-        holder.tvreference = transactions.reference
-        holder.tvdate = transactions.date
-        holder.tvAmount = transactions.amount
+        holder.tvdescription.text = transactions.description
+        holder.tvreference.text = transactions.reference
+        holder.tvdate.text = transactions.date
+        holder.tvAmount.text = transactions.amount
 
 
     }

@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 class TransactionAdapter(var transactionList: List<TransactionDetails>):RecyclerView.Adapter<TransactionViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TransactionViewHolder {
         var itemView = LayoutInflater.from(parent.context).inflate(R.layout.transaction_detail,parent,false)
+        return TransactionViewHolder(itemView)
     }
 
     override fun onBindViewHolder(holder: TransactionViewHolder, position: Int) {

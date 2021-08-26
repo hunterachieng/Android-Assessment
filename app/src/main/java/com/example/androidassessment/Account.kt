@@ -13,9 +13,13 @@ class Account : AppCompatActivity() {
         setContentView(binding.root)
 
         var rvTransactions = binding.rvTransactions
-        var transactions = TransactionDetails(
+        var transactions = listOf(TransactionDetails("Buying food", "MCDERUC2345", "30/2/2021",3000,"Credit Card"),
+            TransactionDetails("Buying food", "MCDERUC2345", "30/2/2021",3000,"Credit Card"),
+            TransactionDetails("Buying food", "MCDERUC2345", "30/2/2021",3000,"Credit Card"),
+            TransactionDetails("Buying food", "MCDERUC2345", "30/2/2021",3000,"Credit Card"),
+            TransactionDetails("Buying food", "MCDERUC2345", "30/2/2021",3000,"Credit Card"))
 
-        )
+
         var transactionAdapter = TransactionAdapter(transactions)
         rvTransactions.adapter = transactionAdapter
         rvTransactions.layoutManager = LinearLayoutManager(baseContext)
